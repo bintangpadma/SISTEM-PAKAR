@@ -22,4 +22,5 @@ Route::get('/', function () {
     return view('home', $data);
 });
 
+Route::get('/home/{diagnosa_id}', [DiagnosaController::class, 'index'])->name('diagnosa.result');
 Route::resource('/spk', DiagnosaController::class);
